@@ -1,0 +1,24 @@
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "tsup": {
+    "entry": ["lib/index.ts"],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "example": "cd example && npm run dev",
+    "postinstall": "npm run build",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "Agney <agney@outlook.in>",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^5.12.4"
+  }
+}
