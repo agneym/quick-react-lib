@@ -1,19 +1,18 @@
 {
-  "name": "component-library",
+  "name": "@app/components",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Reusable components for React",
+  "main": "./dist/components.js",        
+  "module": "./dist/components.mjs",
+  "unpkg": "./dist/components.global.js",    
   "tsup": {
-    "entry": ["lib/index.ts"],
-    "splitting": false,
-    "sourcemap": true,
-    "clean": true
+    "entry": ["lib/components.ts"]
   },
   "scripts": {
     "dev": "tsup --watch",
     "example": "cd example && npm run dev",
     "postinstall": "npm run build",
-    "build": "tsup"
+    "build": "tsup --env.NODE_ENV production --minify --sourcemap --clean --format esm,cjs --dts"
   },
   "keywords": [],
   "author": "Agney <agney@outlook.in>",
