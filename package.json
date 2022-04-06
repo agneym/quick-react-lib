@@ -2,11 +2,13 @@
   "name": "@app/components",
   "version": "1.0.0",
   "description": "Reusable components for React",
-  "main": "./dist/components.js",        
+  "main": "./dist/components.js",
   "module": "./dist/components.mjs",
-  "unpkg": "./dist/components.global.js",    
+  "unpkg": "./dist/components.global.js",
   "tsup": {
-    "entry": ["lib/components.ts"]
+    "entry": [
+      "lib/components.ts"
+    ]
   },
   "scripts": {
     "dev": "tsup --watch",
@@ -18,6 +20,7 @@
   "author": "Agney <agney@outlook.in>",
   "license": "ISC",
   "devDependencies": {
-    "tsup": "^5.12.4"
+    "tsup": "^5.12.4",
+    "typescript": "^4.6.3"
   }
 }
