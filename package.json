@@ -13,26 +13,39 @@
   "tsup": {
     "entry": [
       "lib/components.ts"
+    ],
+    "format": [
+      "esm",
+      "cjs",
+      "iife"
     ]
   },
   "scripts": {
     "dev": "tsup --watch",
     "example": "cd example && npm run dev",
     "postinstall": "npm run build",
-    "build": "tsup --env.NODE_ENV production --minify --sourcemap --clean --format esm,cjs --dts",
+    "build": "tsup --env.NODE_ENV production --minify --sourcemap --clean --dts",
     "prepare": "husky install"
   },
   "keywords": [],
   "author": "Agney <agney@outlook.in>",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "tsup": "^5.12.4",
     "typescript": "^4.6.3"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
