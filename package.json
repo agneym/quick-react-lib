@@ -2,9 +2,14 @@
   "name": "@app/components",
   "version": "1.0.0",
   "description": "Reusable components for React",
-  "main": "./dist/components.js",
-  "module": "./dist/components.mjs",
-  "unpkg": "./dist/components.global.js",
+  "main": "dist/components.js",
+  "module": "dist/components.mjs",
+  "unpkg": "dist/components.global.js",
+  "typings": "dist/components.d.ts",
+  "files": [
+    "dist",
+    "lib"
+  ],
   "tsup": {
     "entry": [
       "lib/components.ts"
