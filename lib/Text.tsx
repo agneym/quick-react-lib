@@ -2,11 +2,13 @@ import React, { FC, ReactNode } from "react";
 
 interface TextProps {
   children: ReactNode;
+  as: any;
 }
 
-const Text: FC<TextProps> = ({ children }) => {
+const Text: FC<TextProps> = ({ as = 'p', children }) => {
+  const As = as;
   return (
-    <h1>{children}</h1>
+    <As>{children}</As>
   );
 }
 
